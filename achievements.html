@@ -1,0 +1,51 @@
+<h2>Major Career Achievements</h2>
+<canvas id="achievementsChart" width="600" height="400"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('achievementsChart').getContext('2d');
+const achievementsChart = new Chart(ctx, {
+  type: 'radar',
+  data: {
+    labels: [
+      'Client Savings',
+      'Efficiency Boost',
+      'Digital Systems',
+      'Recognition',
+      'Tech Versatility',
+      'Creative Solutions'
+    ],
+    datasets: [{
+      label: "Impact Radar",
+      data: [4, 30, 15, 1, 3, 5],
+      backgroundColor: 'rgba(102, 153, 255, 0.4)',
+      borderColor: '#000080',
+      pointBackgroundColor: '#FF6600'
+    }]
+  },
+  options: {
+    plugins: {
+      title: {
+        display: true,
+        text: '🏆 Career Achievements Overview',
+        color: '#000080',
+        font: { size: 18 }
+      },
+      legend: {
+        labels: {
+          color: '#000080'
+        }
+      }
+    },
+    scales: {
+      r: {
+        pointLabels: {
+          color: '#000'
+        },
+        grid: {
+          color: '#999'
+        }
+      }
+    }
+  }
+});
+</script>
