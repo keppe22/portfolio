@@ -2,30 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>John's Win95 Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Boot Screen -->
-  <div id="boot-screen">
-    <h1>Starting Windows 95...</h1>
-    <progress value="0" max="100"></progress>
+  <!-- Start Menu + Boot Greeting -->
+  <div class="boot-banner">
+    <h1>Welcome to John's Windows 95 Portfolio</h1>
   </div>
 
-  <!-- Desktop Icons -->
-  <div id="desktop" style="display: none;">
-    <div class="icon"><a href="skills.html"><img src="images/skills-icon.png" /><span>Skills</span></a></div>
-    <div class="icon"><a href="experience.html"><img src="images/exp-icon.png" /><span>Experience</span></a></div>
-    <div class="icon"><a href="education.html"><img src="images/edu-icon.png" /><span>Education</span></a></div>
-    <div class="icon"><a href="achievements.html"><img src="images/achieve-icon.png" /><span>Achievements</span></a></div>
-  </div>
+  <!-- Desktop Section -->
+  <main class="desktop">
+    <div class="icon-grid">
+      <a class="icon" href="skills.html">
+        <img src="images/skills-icon.png" alt="Skills Icon" />
+        <span>Skills</span>
+      </a>
+      <a class="icon" href="experience.html">
+        <img src="images/exp-icon.png" alt="Experience Icon" />
+        <span>Experience</span>
+      </a>
+      <a class="icon" href="education.html">
+        <img src="images/edu-icon.png" alt="Education Icon" />
+        <span>Education</span>
+      </a>
+      <a class="icon" href="achievements.html">
+        <img src="images/achieve-icon.png" alt="Achievements Icon" />
+        <span>Achievements</span>
+      </a>
+    </div>
+  </main>
 
   <!-- Taskbar -->
-  <div class="taskbar">
+  <footer class="taskbar">
     <button class="start-button">Start</button>
-    <div class="clock">8:30 AM</div>
-  </div>
+    <div class="clock">🕒 8:30 AM</div>
+  </footer>
+
+</body>
+</html>
+
 
   <script src="script.js"></script>
 </body>
