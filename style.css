@@ -1,0 +1,31 @@
+body {
+  background-color: #C0C0C0;
+  font-family: 'Courier New', monospace;
+  color: #000080;
+  margin: 40px;
+}
+.window {
+  border: 2px solid #000;
+  background-color: #FFF;
+  box-shadow: 3px 3px #808080;
+  padding: 20px;
+}
+.title-bar {
+  background-color: #000080;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+a {
+  color: #FF0000;
+  text-decoration: underline;
+}
+h1 {
+  font-size: 18px;
+}
+.chart {
+  width: 500px;
+  height: 500px;
+  background-color: #E0E0E0;
+  margin-top: 20px;
+}
