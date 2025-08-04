@@ -12,8 +12,9 @@
 </div>
 <script>
   setTimeout(() => {
-    window.location.href = "home.html";
-  }, 3000); // 3-second fake load
+    document.querySelector('.boot-screen').style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+  }, 3000);
 </script>
 
  <div id="main-content" style="display: none;">
