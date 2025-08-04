@@ -1,45 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Skills - Win95 Style</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-<h2>Top Admin Skills</h2>
-<canvas id="skillsChart" width="400" height="400"></canvas>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-const ctx = document.getElementById('skillsChart').getContext('2d');
-const skillsChart = new Chart(ctx, {
-  type: 'pie',
-  data: {
-    labels: ['Admin Support', 'Data Entry', 'Problem Solving', 'Communication', 'Emotional Intelligence'],
-    datasets: [{
-      data: [15, 12, 10, 12, 10],
-      backgroundColor: ['#FF6666', '#66FF66', '#6666FF', '#FFFF66', '#FF66FF']
-    }]
-  }
-});
-</script>
-
-<div class="taskbar">
-  <div class="start-button" onclick="toggleStartMenu()">🪟 Start</div>
-  <div id="clock" class="clock-display"></div>
-  <div id="start-menu" class="start-menu hidden">
-    <ul>
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="skills.html">💡 Skills</a></li>
-      <li><a href="experience.html">🧾 Experience</a></li>
-      <li><a href="achievements.html">🏅 Achievements</a></li>
-    </ul>
+  <div class="window">
+    <div class="window-title">Skills</div>
+    <div class="window-content">
+      <ul>
+        <li>HTML / CSS / JS</li>
+        <li>Python & C++</li>
+        <li>Git & GitHub</li>
+        <li>Win95 Enthusiasm 😄</li>
+      </ul>
+      <a href="index.html" class="button">Back to Desktop</a>
+    </div>
   </div>
-</div>
 
-<script>
-  function toggleStartMenu() {
-    const menu = document.getElementById('start-menu');
-    menu.classList.toggle('hidden');
-  }
-  function updateClock() {
-    const now = new Date();
-    document.getElementById("clock").innerText = now.toLocaleTimeString();
-  }
+</body>
+</html>
 
-  setInterval(updateClock, 1000); // Update every second
-  updateClock(); // Initial call
-</script>
 
