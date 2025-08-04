@@ -1,33 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>John's Skills Archive</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Windows 98 Web Experience</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #008080;
+      font-family: 'Courier New', monospace;
+      color: white;
+    }
+
+    .desktop-icon {
+      display: inline-block;
+      width: 80px;
+      text-align: center;
+      margin: 20px;
+      cursor: pointer;
+    }
+
+    .taskbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+      background-color: #C0C0C0;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      border-top: 2px solid #999;
+      font-weight: bold;
+    }
+
+    .start-button {
+      background-color: #E0E0E0;
+      padding: 5px 10px;
+      border: 2px outset #999;
+      cursor: pointer;
+    }
+
+    .clock-display {
+      margin-left: auto;
+      padding: 5px 10px;
+      background-color: #E0E0E0;
+      border-left: 2px groove #999;
+      color: #000080;
+    }
+
+    .start-menu {
+      position: fixed;
+      bottom: 40px;
+      left: 10px;
+      width: 200px;
+      background-color: #FFFFFF;
+      border: 2px groove #000;
+      z-index: 10;
+    }
+
+    .start-menu.hidden {
+      display: none;
+    }
+
+    .start-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .start-menu li {
+      padding: 8px;
+      border-bottom: 1px solid #CCC;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+    }
+
+    .dialog {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      background-color: #FFF;
+      border: 2px solid #000;
+      padding: 10px;
+      z-index: 20;
+    }
+
+    .dialog.hidden {
+      display: none;
+    }
+
+    .title-bar {
+      background-color: #000080;
+      color: white;
+      padding: 5px;
+      font-weight: bold;
+    }
+
+    .message {
+      padding: 10px 0;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="boot-screen">
-  <img src="Win98_logo.webp" alt="Windows 98 Logo" class="logo" style="width: 350px; height: auto;">
-  <p>Loading John.exe...</p>
-</div>
-<script>
-  setTimeout(() => {
-    document.querySelector('.boot-screen').style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
-  }, 3000);
-</script>
-
- <div id="main-content" style="display: none;">
-  <div class="window">
-    <div class="title-bar">My Portfolio - Windows98™ Edition</div>
-    <div class="content">
-      <h1>🧠 Skills, Charts & Achievements</h1>
-      <p>Welcome to my retro portfolio, where data meets dial-up vibes.</p>
-      <a href="skills.html">Skills</a> | 
-      <a href="experience.html">Experience</a> | 
-      <a href="achievements.html">Achievements</a>
-    </div>
+  <!-- Desktop Icons -->
+  <div class="desktop-icon" onclick="alert('Opening My Computer...')">
+    <img src="my-computer-icon.png" alt="My Computer" width="48" />
+    <span>My Computer</span>
   </div>
+
+  <!-- Dialog Box -->
+  <div id="dialog-box" class="dialog hidden">
+    <div class="title-bar">Error</div>
+    <div class="message">This program has performed an illegal operation.</div>
+    <button onclick="closeDialog()">OK</button>
+  </div>
+
+  <!-- Start Menu -->
+  <div id="start-menu" class="start-menu hidden">
+    <ul>
+      <li onclick="alert('Opening Paint...')">🎨 Paint</li>
+      <li onclick="alert('Launching Solitaire...')">🃏 Solitaire</li>
+      <li onclick="alert('Dialing Up...')">📞 Connect to Internet</li>
+      <li onclick="alert('Shutting Down...')">🛑 Shut Down</li>
+    </ul>
+  </div>
+
+  <!-- Taskbar -->
+  <div class="taskbar">
+    <div class="start-button" onclick="toggleStartMenu()">🪟 Start</div>
+    <div id="clock" class="clock-display"></div>
+  </div>
+
+  <!-- Background MIDI Sound -->
+  <audio src="windows98-theme.mid" autoplay loop></audio>
+
+  <!-- Scripts -->
+  <script>
+    function updateClock() {
+      const now = new Date();
+      document.getElementById("clock").innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function toggleStartMenu() {
+      document.getElementById("start-menu").classList.toggle("hidden");
+    }
+
+    function closeDialog() {
+      document.getElementById("dialog-box").classList.add("hidden");
+    }
+
+    // Example trigger for dialog (can be tied to any element)
+    setTimeout(() => {
+      document.getElementById("dialog-box").classList.remove("hidden");
+    }, 3000);
+  </script>
+</body>
+</html>
+
 </div>
 </body>
 </html>
