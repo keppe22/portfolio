@@ -97,3 +97,13 @@ h1 {
   color: #FF0000;
   text-decoration: underline;
 }
+
+.clock-display {
+  margin-left: auto;
+  padding: 5px 10px;
+  background-color: #E0E0E0;
+  border-left: 2px groove #999;
+  font-family: 'Courier New', monospace;
+  color: #000080;
+  font-weight: bold;
+}
