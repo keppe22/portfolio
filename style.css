@@ -1,124 +1,36 @@
 body {
   background-color: #C0C0C0;
-  font-family: 'Courier New', monospace;
-  color: #000080;
-  margin: 40px;
+  font-family: 'MS Sans Serif', sans-serif;
+  color: black;
+  margin: 0;
+  padding: 20px;
 }
+
 .window {
-  border: 2px outset #999;
   background-color: #FFF;
-  box-shadow: 3px 3px #666;
+  border: 2px solid #000080;
+  box-shadow: inset -1px -1px #808080, inset 1px 1px #FFFFFF;
   padding: 10px;
-  width: 600px;
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  cursor: move;
+  width: 400px;
 }
-.title-bar {
+
+.window-title {
   background-color: #000080;
   color: white;
+  padding: 4px;
   font-weight: bold;
-  padding: 5px;
+  font-size: 14px;
 }
 
-a {
-  color: #FF0000;
-  text-decoration: underline;
-}
-h1 {
-  font-size: 18px;
-}
-.chart {
-  width: 500px;
-  height: 500px;
+.button {
+  font-family: 'MS Sans Serif', sans-serif;
   background-color: #E0E0E0;
-  margin-top: 20px;
+  border: 2px outset #FFF;
+  padding: 2px 8px;
+  margin: 5px;
 }
 
-.taskbar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #C0C0C0;
-  border-top: 2px groove #999;
-  padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  font-family: 'Courier New', monospace;
-  z-index: 1000;
+.button:hover {
+  border: 2px inset #FFF;
 }
 
-.start-button {
-  background-color: #000080;
-  color: white;
-  padding: 5px 10px;
-  font-weight: bold;
-  border: 2px outset #666;
-  cursor: pointer;
-}
-
-.start-button:hover {
-  background-color: #3333AA;
-}
-
-.start-menu {
-  position: absolute;
-  bottom: 40px;
-  left: 10px;
-  background-color: #FFFFFF;
-  border: 2px outset #888;
-  padding: 10px;
-  width: 180px;
-  box-shadow: 3px 3px #888;
-}
-
-.start-menu.hidden {
-  display: none;
-}
-
-.start-menu ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.start-menu li {
-  padding: 5px 0;
-}
-
-.start-menu a {
-  text-decoration: none;
-  color: #000080;
-  font-weight: bold;
-}
-
-.start-menu a:hover {
-  color: #FF0000;
-  text-decoration: underline;
-}
-
-.clock-display {
-  margin-left: auto;
-  padding: 5px 10px;
-  background-color: #E0E0E0;
-  border-left: 2px groove #999;
-  font-family: 'Courier New', monospace;
-  color: #000080;
-  font-weight: bold;
-}
-
-.nav-links {
-  margin-top: 20px;
-  font-size: 16px;
-  color: #000080;
-}
-.nav-links a {
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 10px;
-}
-.nav-links a:hover {
-  color: #FF0000;
-  text-decoration: underline;
-}
