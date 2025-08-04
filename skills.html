@@ -1,0 +1,16 @@
+<h2>Top Admin Skills for 2025</h2>
+<canvas id="skillsChart" width="400" height="400"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('skillsChart').getContext('2d');
+const skillsChart = new Chart(ctx, {
+  type: 'pie',
+  data: {
+    labels: ['Admin Support', 'Data Entry', 'Accounting', 'Communication', 'Emotional Intelligence'],
+    datasets: [{
+      data: [15, 12, 10, 12, 10],
+      backgroundColor: ['#FF6666', '#66FF66', '#6666FF', '#FFFF66', '#FF66FF']
+    }]
+  }
+});
+</script>
