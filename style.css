@@ -29,3 +29,65 @@ h1 {
   background-color: #E0E0E0;
   margin-top: 20px;
 }
+
+.taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #C0C0C0;
+  border-top: 2px groove #999;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  font-family: 'Courier New', monospace;
+  z-index: 1000;
+}
+
+.start-button {
+  background-color: #000080;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  border: 2px outset #666;
+  cursor: pointer;
+}
+
+.start-button:hover {
+  background-color: #3333AA;
+}
+
+.start-menu {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  background-color: #FFFFFF;
+  border: 2px outset #888;
+  padding: 10px;
+  width: 180px;
+  box-shadow: 3px 3px #888;
+}
+
+.start-menu.hidden {
+  display: none;
+}
+
+.start-menu ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.start-menu li {
+  padding: 5px 0;
+}
+
+.start-menu a {
+  text-decoration: none;
+  color: #000080;
+  font-weight: bold;
+}
+
+.start-menu a:hover {
+  color: #FF0000;
+  text-decoration: underline;
+}
