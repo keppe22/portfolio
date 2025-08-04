@@ -1,0 +1,65 @@
+<h2>Career & Education Timeline</h2>
+<canvas id="timelineChart" width="700" height="500"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('timelineChart').getContext('2d');
+const timelineChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: [
+      'Nov 2006–Jan 2009',
+      'Jan 2009–Dec 2012',
+      'May 2014',
+      'Oct 2014–Dec 2019',
+      'Jul 2020–Sep 2021',
+      'Jan 2022–Aug 2022',
+      '2013–Present'
+    ],
+    datasets: [{
+      label: 'Experience / Education',
+      data: [3, 4, 0.1, 5, 1, 0.6, 10],
+      backgroundColor: [
+        '#66CCCC',
+        '#FFCC66',
+        '#CCFF99',
+        '#FF9999',
+        '#CCCCFF',
+        '#FFCCFF',
+        '#99FFCC'
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: 'Years Active'
+        }
+      },
+      y: {
+        title: {
+          display: true,
+          text: 'Timeline'
+        }
+      }
+    },
+    plugins: {
+      title: {
+        display: true,
+        text: '🕹️ Timeline of Education & Experience (Retro View)',
+        color: '#000080',
+        font: {
+          size: 16,
+          weight: 'bold'
+        }
+      },
+      legend: {
+        display: false
+      }
+    }
+  }
+});
+</script>
