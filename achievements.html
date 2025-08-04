@@ -68,4 +68,11 @@ const achievementsChart = new Chart(ctx, {
     const menu = document.getElementById('start-menu');
     menu.classList.toggle('hidden');
   }
+  function updateClock() {
+    const now = new Date();
+    document.getElementById("clock").innerText = now.toLocaleTimeString();
+  }
+
+  setInterval(updateClock, 1000); // Update every second
+  updateClock(); // Initial call
 </script>
