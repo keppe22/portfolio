@@ -49,3 +49,23 @@ const achievementsChart = new Chart(ctx, {
   }
 });
 </script>
+
+<div class="taskbar">
+  <div class="start-button" onclick="toggleStartMenu()">🪟 Start</div>
+  <div id="start-menu" class="start-menu hidden">
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="skills.html">💡 Skills</a></li>
+      <li><a href="experience.html">🧾 Experience</a></li>
+      <li><a href="education.html">🎓 Education</a></li>
+      <li><a href="achievements.html">🏅 Achievements</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function toggleStartMenu() {
+    const menu = document.getElementById('start-menu');
+    menu.classList.toggle('hidden');
+  }
+</script>
