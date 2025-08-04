@@ -5,17 +5,23 @@ body {
   margin: 40px;
 }
 .window {
-  border: 2px solid #000;
+  border: 2px outset #999;
   background-color: #FFF;
-  box-shadow: 3px 3px #808080;
-  padding: 20px;
+  box-shadow: 3px 3px #666;
+  padding: 10px;
+  width: 600px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  cursor: move;
 }
 .title-bar {
   background-color: #000080;
   color: white;
-  padding: 5px 10px;
   font-weight: bold;
+  padding: 5px;
 }
+
 a {
   color: #FF0000;
   text-decoration: underline;
