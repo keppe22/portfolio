@@ -1,78 +1,24 @@
-<h2>Major Career Achievements</h2>
-<canvas id="achievementsChart" width="600" height="400"></canvas>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-const ctx = document.getElementById('achievementsChart').getContext('2d');
-const achievementsChart = new Chart(ctx, {
-  type: 'radar',
-  data: {
-    labels: [
-      'Client Savings',
-      'Efficiency Boost',
-      'Digital Systems',
-      'Recognition',
-      'Tech Versatility',
-      'Creative Solutions'
-    ],
-    datasets: [{
-      label: "Impact Radar",
-      data: [4, 30, 15, 1, 3, 5],
-      backgroundColor: 'rgba(102, 153, 255, 0.4)',
-      borderColor: '#000080',
-      pointBackgroundColor: '#FF6600'
-    }]
-  },
-  options: {
-    plugins: {
-      title: {
-        display: true,
-        text: '🏆 Career Achievements Overview',
-        color: '#000080',
-        font: { size: 18 }
-      },
-      legend: {
-        labels: {
-          color: '#000080'
-        }
-      }
-    },
-    scales: {
-      r: {
-        pointLabels: {
-          color: '#000'
-        },
-        grid: {
-          color: '#999'
-        }
-      }
-    }
-  }
-});
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Achievements - Win95 Style</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-<div class="taskbar">
-  <div class="start-button" onclick="toggleStartMenu()">🪟 Start</div>
-  <div id="clock" class="clock-display"></div>
-  <div id="start-menu" class="start-menu hidden">
-    <ul>
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="skills.html">💡 Skills</a></li>
-      <li><a href="experience.html">🧾 Experience</a></li>
-      <li><a href="achievements.html">🏅 Achievements</a></li>
-    </ul>
+  <div class="window">
+    <div class="window-title">Achievements</div>
+    <div class="window-content">
+      <ul>
+        <li>🏆 Retro UI Hackathon Winner 2023</li>
+        <li>📁 10K GitHub Stars Across Projects</li>
+        <li>🧷 Clippy Revival Community Contributor</li>
+      </ul>
+      <a href="index.html" class="button">Back to Desktop</a>
+    </div>
   </div>
-</div>
 
-<script>
-  function toggleStartMenu() {
-    const menu = document.getElementById('start-menu');
-    menu.classList.toggle('hidden');
-  }
-  function updateClock() {
-    const now = new Date();
-    document.getElementById("clock").innerText = now.toLocaleTimeString();
-  }
+</body>
+</html>
 
-  setInterval(updateClock, 1000); // Update every second
-  updateClock(); // Initial call
-</script>
